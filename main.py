@@ -20,6 +20,12 @@ def validate_task(task):
 
 
 def send_new_task(task):
+    if len(task) > 1 or len(task) == 0:
+        print("Invalid number of arguments.")
+        return
+
+    task = " ".join(task)
+
     if validate_task(task):
         params = urllib.urlencode({
             "key": "1",
