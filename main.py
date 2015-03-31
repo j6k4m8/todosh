@@ -62,10 +62,12 @@ def send_new_task(task):
 if len(sys.argv) == 1:
     print("Usage: `todosh [command] [args]`")
 else:
-    if sys.argv[1] == "list":
+    if any(sys.argv[1] == i for i in ['l', 'ls', 'list']):
         get_all_tasks()
-    if sys.argv[1] == "add":
+    elif any(sys.argv[1] == i for i in ['add', 'a']):
         send_new_task(sys.argv[2:])
+    elif sys.argv[1] == "help":
+        print(help_msg)
     else:
         print("Unsupported command: " + sys.argv[1])
 
