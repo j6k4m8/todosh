@@ -6,6 +6,18 @@ import sys
 import re
 import json
 
+help_msg = """
+Usage: todosh [command] [arguments]
+
+Commands
+=======
+    list        Lists all todo-items (JSON)
+    add         "todosh add go to the store \\`tomorrow\\`"
+    help        Shows this message.
+"""
+
+
+
 #=============================================================================={ utils
 def validate_task(task):
     # A string must have matched backticks if it has any
