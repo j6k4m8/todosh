@@ -34,7 +34,9 @@ def get_all_tasks():
     })
     request_url = "http://" + settings.root_url + "/api/tasks/get"
     res = urllib.urlopen(request_url, params)
-    print(json_to_list(res.read()))
+    out = json_to_list(res.read())
+    for i in range(len(out)):
+        print(str(i) + "\t" + (out[i]['due']) + "\t\t" + out[i]['text'])
 
 
 def send_new_task(task):
