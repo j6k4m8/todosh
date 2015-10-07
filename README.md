@@ -8,7 +8,7 @@ Edit your settings.py (or copy the demo settings file to settings.py) in order t
 
 # Usage
 
-| Action | Command | Description | Aliases | 
-|--------|---------|-------------|---------|
-| List all tasks | `todosh list` | Shows a list of all tasks, past and present. | `todosh [ls l list]` |
-| Add a new task | `todosh add "new task text"` | Add new task to the task list | `todosh [a add]` |
+| Command | Description | Aliases | 
+|---------|-------------|---------|
+| `todosh list` | Shows a list of all tasks, past and present. | `todosh [ls l list]` |
+| `todosh add "new task text"` | Add new task to the task list | `todosh [a add]` |
